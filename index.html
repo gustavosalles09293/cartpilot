@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CartPilot — Rede de Lojas Virtuais</title>
+  <meta name="description" content="CartPilot cria sua loja virtual completa: design exclusivo, checkout com Pix e cartão, frete integrado e suporte humano. Faça parte da maior rede de lojas virtuais do Brasil." />
+  <meta name="theme-color" content="#fff7f0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff5a3c'/%3E%3Cpath d='M18 24h28l-3 22H21z' fill='%23fff'/%3E%3Cpath d='M25 24a7 7 0 0 1 14 0' stroke='%23fff' stroke-width='4' fill='none'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#topo" class="logo" aria-label="CartPilot">
+        <span class="logo__mark">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 24h32l-3.5 24h-25z" fill="currentColor"/><path d="M24 24a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/></svg>
+        </span>
+        <span class="logo__text">Cart<b>Pilot</b></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <div class="header__actions">
+        <button class="btn btn--ghost" data-open-login>Entrar</button>
+        <a href="#cadastro" class="btn btn--primary">Cadastrar</a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ BANNER ============ -->
+  <section class="banner">
+    <div class="banner__media">
+      <img src="img/hero.jpg" alt="Estúdio com loja virtual aberta no notebook e sacolas de compras" />
+    </div>
+    <div class="banner__veil"></div>
+    <div class="container banner__content">
+      <span class="pill reveal">+ de 3.200 lojas na rede</span>
+      <h1 class="banner__title">
+        <span class="line"><span>Sua loja virtual</span></span>
+        <span class="line"><span><em>pronta para vender</em></span></span>
+        <span class="line"><span>em 7 dias.</span></span>
+      </h1>
+      <p class="banner__sub reveal">Nós criamos, configuramos e entregamos sua loja completa — design exclusivo, Pix, cartão, frete e domínio próprio. Você só cuida das vendas.</p>
+      <div class="banner__cta reveal">
+        <a href="#cadastro" class="btn btn--primary btn--lg">Quero minha loja <i>→</i></a>
+        <a href="#como-funciona" class="btn btn--glass btn--lg">Ver como funciona</a>
+      </div>
+    </div>
+    <div class="banner__scroll"><span></span>role</div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Moda</span><b>✦</b><span>Beleza</span><b>✦</b><span>Pet Shop</span><b>✦</b><span>Eletrônicos</span><b>✦</b><span>Casa &amp; Decoração</span><b>✦</b><span>Fitness</span><b>✦</b><span>Infantil</span><b>✦</b><span>Joias</span><b>✦</b><span>Calçados</span><b>✦</b><span>Suplementos</span><b>✦</b>
+      <span>Moda</span><b>✦</b><span>Beleza</span><b>✦</b><span>Pet Shop</span><b>✦</b><span>Eletrônicos</span><b>✦</b><span>Casa &amp; Decoração</span><b>✦</b><span>Fitness</span><b>✦</b><span>Infantil</span><b>✦</b><span>Joias</span><b>✦</b><span>Calçados</span><b>✦</b><span>Suplementos</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- ============ 3D COM ROLAGEM ============ -->
+  <section class="story" id="como-funciona">
+    <div class="story__pin">
+      <canvas id="bag3d"></canvas>
+      <div class="container story__grid">
+        <div class="story__label">Como funciona</div>
+        <div class="story__steps">
+          <article class="step is-active" data-step="0">
+            <span class="step__n">01</span>
+            <h2>Escolha o estilo<br/>da sua marca</h2>
+            <p>Mais de 40 modelos criados por designers, adaptados ao seu nicho, às suas cores e ao seu público.</p>
+          </article>
+          <article class="step" data-step="1">
+            <span class="step__n">02</span>
+            <h2>A gente monta<br/>tudo por você</h2>
+            <p>Cadastro de produtos, meios de pagamento, frete, domínio, e-mail profissional e integrações. Sem código.</p>
+          </article>
+          <article class="step" data-step="2">
+            <span class="step__n">03</span>
+            <h2>Abra as portas<br/>e comece a vender</h2>
+            <p>Sua loja entra no ar com checkout otimizado, painel de pedidos e um gerente de sucesso ao seu lado.</p>
+          </article>
+        </div>
+        <div class="story__progress"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NÚMEROS ============ -->
+  <section class="stats container">
+    <div class="stat reveal"><strong data-count="3200">0</strong><span>lojas ativas na rede</span></div>
+    <div class="stat reveal"><strong data-count="7" data-suffix=" dias">0</strong><span>prazo médio de entrega</span></div>
+    <div class="stat reveal"><strong data-count="98" data-suffix="%">0</strong><span>clientes satisfeitos</span></div>
+    <div class="stat reveal"><strong data-count="24" data-suffix="/7">0</strong><span>loja vendendo sem parar</span></div>
+  </section>
+
+  <!-- ============ GALERIA HORIZONTAL ============ -->
+  <section class="hscroll" id="recursos">
+    <div class="hscroll__pin">
+      <div class="hscroll__head container">
+        <span class="kicker">Feito para quem empreende</span>
+        <h2 class="h2">Tudo que sua loja precisa,<br/><em>num só lugar.</em></h2>
+      </div>
+      <div class="hscroll__track">
+        <figure class="panel">
+          <div class="panel__img"><img src="img/foto1.jpg" alt="Empreendedora embalando pedido" /></div>
+          <figcaption><b>Gestão de pedidos</b>Do pagamento à etiqueta de envio, tudo em um painel simples.</figcaption>
+        </figure>
+        <figure class="panel">
+          <div class="panel__img"><img src="img/foto2.jpg" alt="Cliente comprando pelo celular" /></div>
+          <figcaption><b>Experiência mobile</b>80% das compras são no celular. Sua loja é rápida e linda em qualquer tela.</figcaption>
+        </figure>
+        <figure class="panel">
+          <div class="panel__img"><img src="img/foto3.jpg" alt="Produtos de beleza em vitrine" /></div>
+          <figcaption><b>Vitrines que convertem</b>Fotos em destaque, kits, cupons e avaliações para aumentar o ticket.</figcaption>
+        </figure>
+        <figure class="panel">
+          <div class="panel__img"><img src="img/foto4.jpg" alt="Designer criando loja virtual" /></div>
+          <figcaption><b>Design sob medida</b>Uma equipe de designers dedicada à identidade da sua marca.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECURSOS (TILT 3D) ============ -->
+  <section class="features container">
+    <div class="section-head">
+      <span class="kicker">Recursos</span>
+      <h2 class="h2">Uma loja completa,<br/><em>sem dor de cabeça.</em></h2>
+    </div>
+    <div class="cards">
+      <div class="card tilt reveal"><div class="card__icon">⚡</div><h3>Checkout em 1 página</h3><p>Pix, cartão em até 12x e boleto, com recuperação de carrinho automática.</p></div>
+      <div class="card tilt reveal"><div class="card__icon">🚚</div><h3>Frete inteligente</h3><p>Correios e transportadoras com cálculo em tempo real e etiquetas com desconto.</p></div>
+      <div class="card tilt reveal"><div class="card__icon">🌐</div><h3>Domínio próprio</h3><p>suamarca.com.br com certificado de segurança e e-mail profissional inclusos.</p></div>
+      <div class="card tilt reveal"><div class="card__icon">📈</div><h3>SEO e anúncios</h3><p>Pronta para Google, Meta e TikTok, com pixels e catálogo de produtos integrados.</p></div>
+      <div class="card tilt reveal"><div class="card__icon">💬</div><h3>Atendimento integrado</h3><p>WhatsApp, Instagram e chat da loja centralizados num só painel.</p></div>
+      <div class="card tilt reveal"><div class="card__icon">🤝</div><h3>Gerente dedicado</h3><p>Uma pessoa real acompanhando seus resultados e sugerindo melhorias todo mês.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ PLANOS ============ -->
+  <section class="plans" id="planos">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="kicker">Planos</span>
+        <h2 class="h2">Escolha como quer <em>começar.</em></h2>
+      </div>
+      <div class="plans__grid">
+        <div class="plan tilt reveal">
+          <h3>Start</h3>
+          <div class="plan__price"><small>R$</small>97<span>/mês</span></div>
+          <ul><li>Modelo pronto personalizado</li><li>Até 100 produtos</li><li>Pix, cartão e boleto</li><li>Suporte por chat</li></ul>
+          <a href="#cadastro" class="btn btn--outline">Começar</a>
+        </div>
+        <div class="plan plan--hot tilt reveal">
+          <span class="plan__tag">Mais escolhido</span>
+          <h3>Pro</h3>
+          <div class="plan__price"><small>R$</small>197<span>/mês</span></div>
+          <ul><li>Design exclusivo da marca</li><li>Produtos ilimitados</li><li>Domínio + e-mail profissional</li><li>Integração WhatsApp e Instagram</li><li>Gerente de sucesso</li></ul>
+          <a href="#cadastro" class="btn btn--primary">Quero o Pro</a>
+        </div>
+        <div class="plan tilt reveal">
+          <h3>Rede</h3>
+          <div class="plan__price"><small>R$</small>397<span>/mês</span></div>
+          <ul><li>Até 3 lojas na rede</li><li>Estoque compartilhado</li><li>Multi-CD e franquias</li><li>API e integrações ERP</li></ul>
+          <a href="#cadastro" class="btn btn--outline">Falar com time</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="quotes container">
+    <div class="quote reveal">
+      <p>“Saí do Instagram para uma loja de verdade em uma semana. O faturamento dobrou no segundo mês.”</p>
+      <div class="quote__who"><span class="avatar" style="--h:12">MF</span><div><b>Mariana F.</b><small>Moda feminina · SP</small></div></div>
+    </div>
+    <div class="quote reveal">
+      <p>“O checkout é absurdo de rápido. A recuperação de carrinho paga a mensalidade sozinha.”</p>
+      <div class="quote__who"><span class="avatar" style="--h:200">RL</span><div><b>Rafael L.</b><small>Suplementos · MG</small></div></div>
+    </div>
+    <div class="quote reveal">
+      <p>“Tenho três lojas na rede e controlo tudo de um painel só. Atendimento nota mil.”</p>
+      <div class="quote__who"><span class="avatar" style="--h:140">CS</span><div><b>Carla S.</b><small>Pet shop · PR</small></div></div>
+    </div>
+  </section>
+
+  <!-- ============ CADASTRO ============ -->
+  <section class="signup" id="cadastro">
+    <div class="container signup__grid">
+      <div class="signup__text">
+        <span class="kicker kicker--light">Cadastro</span>
+        <h2 class="h2">Entre para a rede<br/><em>CartPilot.</em></h2>
+        <p>Preencha seus dados e nossa equipe analisa seu perfil para iniciar a criação da sua loja.</p>
+        <ul class="checks">
+          <li>Análise em até 48h úteis</li>
+          <li>Sem taxa de adesão</li>
+          <li>Cancele quando quiser</li>
+        </ul>
+      </div>
+      <form class="form" id="signupForm" novalidate>
+        <div class="form__body">
+          <div class="field"><input type="text" id="s-nome" name="nome" placeholder=" " required autocomplete="off" /><label for="s-nome">Nome completo</label></div>
+          <div class="field"><input type="email" id="s-email" name="email" placeholder=" " required autocomplete="off" /><label for="s-email">E-mail</label></div>
+          <div class="field"><input type="tel" id="s-tel" name="telefone" placeholder=" " required autocomplete="off" /><label for="s-tel">Telefone / WhatsApp</label></div>
+          <div class="form__row">
+            <div class="field"><input type="password" id="s-senha" name="senha" placeholder=" " required minlength="6" autocomplete="new-password" /><label for="s-senha">Senha</label></div>
+            <div class="field"><input type="password" id="s-senha2" name="senha2" placeholder=" " required autocomplete="new-password" /><label for="s-senha2">Confirmar senha</label></div>
+          </div>
+          <p class="form__error" id="signupError"></p>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Confirmar</button>
+        </div>
+        <div class="form__done" hidden>
+          <div class="done__icon">✓</div>
+          <h3>Seus dados foram enviados para análise.</h3>
+          <p>Em breve nossa equipe entrará em contato pelo e-mail informado.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq container" id="faq">
+    <div class="section-head section-head--center">
+      <span class="kicker">Dúvidas</span>
+      <h2 class="h2">Perguntas <em>frequentes.</em></h2>
+    </div>
+    <details class="faq__item"><summary>Preciso saber programar?</summary><p>Não. Nossa equipe cria e configura tudo. Você recebe a loja pronta e aprende a usar o painel em minutos.</p></details>
+    <details class="faq__item"><summary>Em quanto tempo minha loja fica pronta?</summary><p>O prazo médio é de 7 dias após a aprovação do cadastro e envio dos produtos.</p></details>
+    <details class="faq__item"><summary>Posso usar meu próprio domínio?</summary><p>Sim. Configuramos seu domínio atual ou registramos um novo para você nos planos Pro e Rede.</p></details>
+    <details class="faq__item"><summary>Existe fidelidade?</summary><p>Não. Você pode cancelar quando quiser, sem multa.</p></details>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#topo" class="logo logo--light"><span class="logo__mark"><svg viewBox="0 0 64 64"><path d="M16 24h32l-3.5 24h-25z" fill="currentColor"/><path d="M24 24a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/></svg></span><span class="logo__text">Cart<b>Pilot</b></span></a>
+      <p>Rede de lojas virtuais · Feito no Brasil</p>
+      <p class="footer__copy">© <span id="ano"></span> CartPilot. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ POPUP LOGIN ============ -->
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal__x" data-close aria-label="Fechar">×</button>
+      <div class="modal__head">
+        <span class="logo__mark logo__mark--lg"><svg viewBox="0 0 64 64"><path d="M16 24h32l-3.5 24h-25z" fill="currentColor"/><path d="M24 24a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round"/></svg></span>
+        <h3 id="loginTitle">Acesse sua loja</h3>
+        <p>Entre com seu login e senha.</p>
+      </div>
+      <form id="loginForm" novalidate>
+        <div class="field"><input type="text" id="l-user" placeholder=" " required autocomplete="off" /><label for="l-user">Login ou e-mail</label></div>
+        <div class="field"><input type="password" id="l-pass" placeholder=" " required autocomplete="off" /><label for="l-pass">Senha</label></div>
+        <p class="form__error" id="loginError"></p>
+        <button type="submit" class="btn btn--primary btn--block">Entrar</button>
+        <p class="modal__foot">Ainda não tem conta? <a href="#cadastro" data-close>Cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }</script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
